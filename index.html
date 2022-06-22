@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Tetris Game</title>
+    <style>
+      button:hover {
+        background-color: #bca0dc !important;
+      }
+      button:active {
+        background-color: #9969d0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="800"> </canvas>
+    <canvas
+      id="nextShapeCanvas"
+      width="200"
+      height="200"
+      style="position: absolute; top: 10"
+    >
+    </canvas>
+
+    <canvas
+      id="scoreCanvas"
+      width="200"
+      height="200"
+      style="position: absolute; top: 220"
+    >
+    </canvas>
+
+    <button
+      style="
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: gray;
+        border: 0px;
+      "
+      onClick="resetVars()"
+    >
+      <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+        <use class="ytp-svg-shadow" xlink:href="#ytp-id-54"></use>
+        <path
+          class="ytp-svg-fill"
+          fill="#ffffff"
+          d="M 18,11 V 7 l -5,5 5,5 v -4 c 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 -3.3,0 -6,-2.7 -6,-6 h -2 c 0,4.4 3.6,8 8,8 4.4,0 8,-3.6 8,-8 0,-4.4 -3.6,-8 -8,-8 z"
+          id="ytp-id-54"
+        ></path>
+      </svg>
+    </button>
+    <img id="image" src="rotations.png" style="display: none" />
+
+    <script src="tetris.js"></script>
+  </body>
+</html>
